@@ -49,6 +49,8 @@ dependencies {
 
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 
+    testImplementation("io.mockk:mockk:1.13.5") // Replace with the latest version
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0") // JUnit 5
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")

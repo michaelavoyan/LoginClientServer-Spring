@@ -21,15 +21,25 @@ class UserService(
 
     fun createUser(username: String, password: String, email: String): User {
         val hashedPassword = "fake password" // passwordEncoder.encode(password)
-        val user = User(username = username, password = hashedPassword, email = email)
+        val user = User(
+            id = 1,
+            username = "michael",
+            password = "password",
+            email = "michael.avoyan@gmail.com"
+        )
         //userRepository.save(user)
         return user
     }
 
     fun getUser(id: Long): User? {
-        val user = User(username = "michael", password = "password", email = "michael.avoyan@gmail.com")
+        val mockUser = User(
+            id = id,
+            username = "michael",
+            password = "password",
+            email = "michael.avoyan@gmail.com"
+        )
         // val user = userRepository.findById(id).orElse(null)
-        return user
+        return mockUser
     }
 
     fun updateUser(id: Long, email: String): User? {
@@ -38,9 +48,8 @@ class UserService(
         return user //userRepository.save(user)
     }
 
-    fun deleteUser(id: Long): Boolean {
+    fun deleteUser(id: Long) {
         //userRepository.deleteById(id)
-        return true
     }
 
     fun authenticate(username: String, password: String): Boolean {
