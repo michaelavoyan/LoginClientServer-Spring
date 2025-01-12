@@ -26,3 +26,6 @@ LoginServer/.DS_Store
 LoginServer/src/main/.DS_Store
 LoginServer/src/main/kotlin/com/michaelavoyan/loginserver/.DS_Store
 .DS_Store
+/LoginServer/.gradle
+/LoginServer/.idea
+/LoginServer/build
